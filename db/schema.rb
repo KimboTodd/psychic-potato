@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2021_04_07_030346) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "mircroposts", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
